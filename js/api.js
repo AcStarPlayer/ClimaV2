@@ -26,14 +26,41 @@ export async function getCoordinates(city) {
 export async function getWeather(latitude, longitude) {
 
   const response = await fetch(
-    `${WEATHER_API}?latitude=${latitude}&longitude=${longitude}&current_weather=true`
+
+    `${WEATHER_API}
+    ?latitude=${latitude}
+    &longitude=${longitude}
+
+    &current=
+    temperature_2m,
+    relative_humidity_2m,
+    apparent_temperature,
+    precipitation,
+    weather_code,
+    wind_speed_10m,
+    wind_direction_10m,
+    is_day
+
+    &daily=
+    weather_code,
+    temperature_2m_max,
+    temperature_2m_min,
+    sunrise,
+    sunset,
+    uv_index_max,
+    precipitation_probability_max
+
+    &hourly=
+    temperature_2m
+
+    &timezone=auto`
+
+    .replace(/\s/g, "")
   );
 
   if (!response.ok) {
     throw new Error("Error obteniendo clima.");
   }
 
-  const data = await response.json();
-
-  return data.current_weather;
+  return await response.json();
 }

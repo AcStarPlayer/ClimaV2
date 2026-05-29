@@ -85,3 +85,94 @@ searchBtn.addEventListener(
 
   }
 );
+
+window.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    getCurrentLocationWeather();
+
+  }
+);
+
+async function getCurrentLocationWeather() {
+
+  if (!navigator.geolocation) return;
+
+  navigator.geolocation.getCurrentPosition(
+
+    async (position) => {
+
+      const latitude =
+        position.coords.latitude;
+
+      const longitude =
+        position.coords.longitude;
+
+      try {
+
+        showLoading();
+
+        const weather =
+          await getWeather(
+            latitude,
+            longitude
+          );
+
+        showWeather(
+          "Tu ubicación",
+          weather
+        );
+
+      } catch (error) {
+
+        showError(error.message);
+
+      } finally {
+
+        hideLoading();
+      }
+    }
+  );
+}
+
+/* FAVORITOS */
+
+function saveFavorite(city) {
+
+  let favorites =
+    JSON.parse(
+      localStorage.getItem("favorites")
+    ) || [];
+
+  if (!favorites.includes(city)) {
+
+    favorites.push(city);
+
+    localStorage.setItem(
+      "favorites",
+      JSON.stringify(favorites)
+    );
+  }
+}
+
+/* HISTORIAL */
+
+function saveHistory(city) {
+
+  let history =
+    JSON.parse(
+      localStorage.getItem("history")
+    ) || [];
+
+  history.unshift(city);
+
+  history = [...new Set(history)];
+
+  history = history.slice(0, 5);
+
+  localStorage.setItem(
+    "history",
+    JSON.stringify(history)
+  );
+}
