@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atmosfera</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <img src="assets/weather-icon.png" alt="Weather Icon" class="logo" />
+
+      <h1>Atmosfera</h1>
+
+      <p class="subtitle">
+        Consulta el clima en tiempo real
+      </p>
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Ingresa una ciudad..."
+        />
+
+        <button id="searchBtn">
+          Buscar
+        </button>
+
+      </div>
+
+      <div id="loading" class="loading hidden">
+        Cargando clima...
+      </div>
+
+      <div id="weatherResult" class="weather-result hidden">
+
+        <h2 id="cityName"></h2>
+
+        <div class="weather-info">
+
+          <div class="info-box">
+            <span> Temperatura</span>
+            <h3 id="temperature">--°C</h3>
+          </div>
+
+          <div class="info-box">
+            <span> Viento</span>
+            <h3 id="windSpeed">-- km/h</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="errorMessage" class="error hidden"></div>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
