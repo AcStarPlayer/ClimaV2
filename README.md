@@ -6,13 +6,13 @@ La aplicación incorpora una experiencia visual premium inspirada en aplicacione
 
 ---
 
-# 🚀 Características principales
+# Características principales
 
-## 🌍 Geolocalización automática
+## Geolocalización automática
 
 Obtiene automáticamente el clima de la ubicación actual del usuario mediante `navigator.geolocation`.
 
-## 🌡️ Información meteorológica avanzada
+## Información meteorológica avanzada
 
 Muestra:
 
@@ -25,7 +25,7 @@ Muestra:
 * Precipitación
 * Amanecer y atardecer
 
-## 🌦️ Estado del clima dinámico
+## Estado del clima dinámico
 
 Interpretación visual de códigos meteorológicos:
 
@@ -35,14 +35,14 @@ Interpretación visual de códigos meteorológicos:
 * Tormenta
 * Nieve
 
-## 🎨 Fondos dinámicos
+## Fondos dinámicos
 
 Cambio automático de estilos visuales según:
 
 * Clima actual
 * Día o noche
 
-## 🌧️ Animaciones climáticas
+## Animaciones climáticas
 
 Incluye:
 
@@ -51,11 +51,11 @@ Incluye:
 * Íconos climáticos GIF
 * Efectos visuales modernos
 
-## 📅 Pronóstico extendido
+## Pronóstico extendido
 
 Pronóstico climático de los próximos 5 días.
 
-## ⏰ Pronóstico por horas
+## Pronóstico por horas
 
 Visualización del clima de las próximas horas.
 
@@ -63,11 +63,11 @@ Visualización del clima de las próximas horas.
 
 Mapa integrado usando **Leaflet.js** y **OpenStreetMap**.
 
-## 💾 Caché inteligente
+## Caché inteligente
 
 Uso de `localStorage` para optimizar consultas y mejorar rendimiento.
 
-## 📱 Diseño responsive
+## Diseño responsive
 
 Compatible con:
 
@@ -77,7 +77,7 @@ Compatible con:
 
 ---
 
-# 🛠️ Tecnologías utilizadas
+# Tecnologías utilizadas
 
 ## Frontend
 
@@ -162,9 +162,9 @@ o utilizar una extensión como:
 
 ---
 
-# 🔌 APIs utilizadas
+# APIs utilizadas
 
-## 🌦️ Open-Meteo API
+## Open-Meteo API
 
 API principal para obtener datos meteorológicos.
 
@@ -174,7 +174,7 @@ https://open-meteo.com/
 
 ---
 
-## 🌍 Geocoding API
+## Geocoding API
 
 Conversión de ciudades a coordenadas geográficas.
 
@@ -184,7 +184,7 @@ https://geocoding-api.open-meteo.com/
 
 ---
 
-# ✨ Funcionalidades implementadas
+# Funcionalidades implementadas
 
 * [x] Búsqueda por ciudad
 * [x] Geolocalización automática
@@ -199,9 +199,9 @@ https://geocoding-api.open-meteo.com/
 
 ---
 
-# 🔥 Próximas mejoras
+# Próximas mejoras
 
-## 🚀 Roadmap
+## Roadmap
 
 * [ ] Calidad del aire
 * [ ] Guardar ciudades favoritas
@@ -225,7 +225,7 @@ Desarrollador frontend y desarrollador de videojuegos.
 
 ---
 
-# 📄 Licencia
+# Licencia
 
 Proyecto desarrollado con fines educativos y de práctica profesional.
 
